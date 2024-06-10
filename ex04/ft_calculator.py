@@ -53,21 +53,49 @@ class calculator:
             self.list = [i / object for i in self.list]
             print(self.list)
 
+    def dotproduct(a, b) -> None:
+        """
+        Calculate and print the dot product of two vectors.
+
+        :param a: First vector, a list of numbers.
+        :param b: Second vector, a list of numbers.
+        """
+        dot_product = 0
+        for i in range(len(a)):
+            dot_product += a[i] * b[i]
+        print(f"Dot product is: {dot_product}")
+
+    def add_vec(a, b) -> None:
+        """
+        Add two vectors and print the result.
+
+        :param a: First vector, a list of numbers.
+        :param b: Second vector, a list of numbers.
+        """
+        add_vec = []
+        for i in range(len(a)):
+            add_vec.append(float(a[i]) + float(b[i]))
+        print(f"Add Vector is: {add_vec}")
+
+    def sous_vec(a, b) -> None:
+        """
+        Subtract the second vector from the first and print the result.
+
+        :param a: First vector, a list of numbers.
+        :param b: Second vector, a list of numbers.
+        """
+        sous_vec = []
+        for i in range(len(a)):
+            sous_vec.append(float(a[i]) - float(b[i]))
+        print(f"Sous Vector is: {sous_vec}")
+
 
 def main() -> None:
-    try:
-        v1 = calculator([0.0, 1.0, 2.0, 3.0, 4.0, 5.0])
-        v1 + 5
-        print("---")
-        v2 = calculator([0.0, 1.0, 2.0, 3.0, 4.0, 5.0])
-        v2 * 5
-        print("---")
-        v3 = calculator([10.0, 15.0, 20.0])
-        v3 - 5
-        v3 / 5
-        v3 / 0
-    except AssertionError as e:
-        print(e)
+    a = [5, 10, 2]
+    b = [2, 4, 3]
+    calculator.dotproduct(a, b)
+    calculator.add_vec(a, b)
+    calculator.sous_vec(a, b)
 
 
 if __name__ == "__main__":

@@ -26,18 +26,15 @@ class Character(ABC):
         """Check if the character is alive"""
         pass
 
-
     @abstractmethod
     def get_family_name(self):
         """Get the family name"""
         pass
-    
 
     @abstractmethod
     def get_eyes(self):
         """Get the eyes color"""
         pass
-
 
     @abstractmethod
     def get_hair(self):
